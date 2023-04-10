@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+        defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .head {
+            background-color: lightgray;
+            text-align: right;
+        }
+
+        .head a {
+            font-size: large;
+            color: black;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .head a:hover {
+            border-bottom: 2px solid black;
+        }
+
+        .items a {
+            margin-left: 120px;
+            font-size: 22px;
+            font-weight: 100;
+            color: black;
+            transition: 0.5s;
+
+        }
+
+        .items a:hover {
+            color: aquamarine;
+        }
+
+        .items {
+            margin-right: 250px;
+        }
+        #items a.item1{
+            transition: 1s;
+        }
+        #items a.item1{
+            background-color: aliceblue;
+            color: green;
+        }
+        #items a:hover{
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <div class="navbar bg-light">
+            <div class="logo ms-5">
+                <img style="width: 75px;margin-right: 100px" src="img/apple-icon.png" alt="">
+            </div>
+            <div class="items">
+                <a class="" href="#">Home</a>
+                <a class="" href="#">About</a>
+                <a class="" href="#">Shop</a>
+                <a class="" href="#">Contact</a>
+            </div>
+            <div class="search me-5 fs-5">
+                <a class="m-3 text-dark fs-3" href="#"><i class="bi bi-person"></i></a>
+                <a class="m-3 text-dark" href="#"><i class="bi bi-search"></i></a>
+                <a class="m-3 text-dark" href="#"><i class="bi bi-cart-fill"></i></a>
+            </div>
+        </div>
+    </header>
+    <div style="height: 724px;" class=" swiffy-slider slider-item-ratio slider-item-ratio-21x9 slider-nav-visible slider-nav-animation slider-item-last-visible slider-item-first-visible"
+        id="infiniteSliding">
+        <style>
+            #infiniteSliding .slider-indicators button:last-child {
+                display: none
+            }
+        </style>
+        <ul class="slider-container" id="container1">
+            <li id="slide1" class="slide-visible">
+                <div class="w-75 d-flex mt-3" style="margin-left: 200px;background-color: lightgray;height: 508px;">
+                    <div style="margin-right: 200px;top: 200px;position: relative;">
+                        <h2 class="ms-5">Proident occaecat</h2>
+                        <p class="ms-5">We bring you 100% free CSS templates for your websites. If you wish to support TemplateMo, please make a small contribution via PayPal or tell your friends about our website. Thank you.</p>
+                    </div>
+                    <div>
+                        <img style="width: 508px;" src="img/banner_img_01.jpg" alt="">
+                    </div>
+                </div>
+            </li>
+            <li id="slide2" class="slide-visible">
+                <div class="w-75 d-flex mt-3" style="margin-left: 200px;background-color: lightgray;height: 508px;">
+                    <div style="margin-right: 200px;top: 200px;position: relative;">
+                        <h2 class="ms-5">Proident occaecat</h2>
+                        <p class="ms-5">You are permitted to use this Zay CSS template for your commercial websites. You are not permitted to re-distribute the template ZIP file in any kind of template collection websites.</p>
+                    </div>
+                    <div>
+                        <img style="width: 508px;" src="img/banner_img_02.jpg" alt="">
+                    </div>
+                </div>
+            </li>
+            <li id="slide3" class="slide-visible">
+                <div class="w-75 d-flex mt-3" style="margin-left: 200px;background-color: lightgray;height: 508px;">
+                    <div style="margin-right: 200px;top: 200px;position: relative;">
+                        <h2 class="ms-5">Repr in voluptate</h2>
+                        <p class="ms-5">We bring you 100% free CSS templates for your websites. If you wish to support TemplateMo, please make a small contribution via PayPal or tell your friends about our website. Thank you.</p>
+                    </div>
+                    <div>
+                        <img style="width: 508px;" src="img/banner_img_03.jpg" alt="">
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <button type="button" class="slider-nav" aria-label="Go to previous"></button>
+        <button type="button" class="slider-nav slider-nav-next" aria-label="Go to next"></button>
+
+        <div id="items" class="container-fluid" style="background-color: aquamarine;">
+            <div class="row text-center justify-content-center">
+                <h2 class="mb-3 text-dark mt-4">Our Services</h2>
+                <h5 class="mb-5 text-dark">Here Are Best Options Of Our Company</h5>
+                <a class="col-3 text-center me-4 mb-5 item1 shadow-lg" style="height: 250px;cursor: pointer;">
+                    <div class="mt-5"><i class="bi bi-truck fs-1"></i></div>
+                    <h3 class="fs-2">Delivery Services</h3>
+                </a>
+                <a class="col-3 text-center me-4 mb-5 item1 shadow-lg" style="cursor: pointer;">
+                    <div class="mt-5"><i class="bi bi-arrow-left-right fs-1"></i></div>
+                    <h3 class="fs-2">Shipping & Return</h3>
+                </a>
+                <a class="col-3 text-center me-4 mb-5 item1 shadow-lg" style="cursor: pointer;">
+                    <div class="mt-5"><i class="bi bi-percent fs-1"></i></div>
+                    <h3 class="fs-2">Promotion</h3>
+                </a>
+            </div>
+        </div>
+        <div id="items" class="container-fluid mt-5">
+            <div class="row text-center justify-content-center">
+                <h1 class="mb-3 text-dark mt-4">Our Brands</h1>
+                <h3 class="mb-5 text-dark">Best Brans Of The Year</h3>
+            </div>
+            <div class="col-12 justify-content-center">
+                <div style="width: 1500px;margin-left: 100px;" class="swiffy-slider slider-item-show4 slider-nav-outside slider-nav-dark slider-nav-sm slider-nav-visible slider-nav-page slider-item-snapstart slider-nav-autoplay slider-nav-autopause slider-item-ratio slider-item-ratio-contain slider-item-ratio-32x9 bg-white shadow-lg py-3 py-lg-4" data-slider-nav-autoplay-interval="2000">
+                    <div class="slider-container">
+                        <div><img src="img/brand_01.png" alt="..."></div>
+                        <div><img src="img/brand_02.png" loading="lazy" alt="..."></div>
+                        <div><img src="img/brand_03.png" loading="lazy" alt="..."></div>
+                        <div><img src="img/brand_04.png" loading="lazy" alt="..."></div>
+                        <div><img src="img/brand_01.png" alt="..."></div>
+                        <div><img src="img/brand_02.png" loading="lazy" alt="..."></div>
+                        <div><img src="img/brand_03.png" loading="lazy" alt="..."></div>
+                        <div><img src="img/brand_04.png" loading="lazy" alt="..."></div>
+                        <div><img src="img/brand_01.png" alt="..."></div>
+                        <div><img src="img/brand_02.png" loading="lazy" alt="..."></div>
+                        <div><img src="img/brand_03.png" loading="lazy" alt="..."></div>
+                        <div><img src="img/brand_04.png" loading="lazy" alt="..."></div>
+                       
+                    </div>
+                
+                    <button type="button" class="slider-nav" aria-label="Go left"></button>
+                    <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+                
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <footer class="bg-dark mt-5">
+            <div class="text-center text-white bg-dark" style="height: 50px;">
+                <p class="pt-3 fw-lighter fs-6">Designed by Armin Shams</p>
+            </div>
+        </footer>
+        <script>
+            window.addEventListener('load', () => {
+                let sliderElement = document.getElementById('infiniteSliding');
+                const container = sliderElement.querySelector(".slider-container");
+
+                const infiniteScrollToFirstWhenOnLast = () => {
+                    if (container.lastElementChild == container.querySelector('.slide-visible')) {
+                        container.scroll({
+                            left: 0,
+                            behavior: "instant"
+                        });
+                    }
+                };
+                //Append the first slide as the last
+                container.appendChild(container.firstElementChild.cloneNode(true));
+                //Add an additional indicator button to keep counts correct
+                sliderElement.querySelector(".slider-indicators").appendChild(sliderElement.querySelector(".slider-indicators").lastElementChild.cloneNode(true));
+                swiffyslider.onSlideEnd(sliderElement, infiniteScrollToFirstWhenOnLast, 90);
+            });
+        </script>
+    </div>
+    <main>
+    </main>
+</body>
+
+</html>
