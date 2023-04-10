@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Document</title>
+    <script>
+        $( function() {
+          $( "#accordion" ).accordion();
+        } );
+        </script>
+    <style>
+        .items {
+            height: 90px;
+            width: 90px;
+            text-align: center;
+            background-color: orange;
+            transition: 0.5s;
+        }
+
+        .items:hover {
+            background-color: white;
+        }
+
+        .item button {
+            background-color: orange;
+            border: 1px solid orange;
+            transition: 1s;
+        }
+
+        .item button:hover {
+            background-color: white;
+        }
+
+        ul.a a {
+            list-style-type: circle;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        #navbar {
+            background-color: #465328;
+        }
+
+        #navbar2 {
+            background-color: #465328;
+            display: none;
+            z-index: -100
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#" class="mb-3 text-warning">About</a>
+        <a href="#" class="mb-3 text-warning">Services</a>
+        <a href="#" class="mb-3 text-warning">Clients</a>
+        <a href="#" class="mb-3 text-warning">Contact</a>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center"
+                style="background-image: url(img/@Wallpaper_4K3D\ \(12262\).jpg);height: 650px;background-size: cover;">
+                <div onclick="home()" class="rounded-circle me-5 items" style="margin-top: 100px;">
+                    <a href="#"><img class="mt-4" src="img/home-icon.png" alt=""></a>
+                    <h6 class="mt-5 text-light">Welcome</h6>
+                </div>
+                <div onclick="project()" class="rounded-circle me-5 items" style="margin-top: 100px;">
+                    <a href="#"><img class="mt-4" src="img/projects-icon.png" alt=""></a>
+                    <h6 class="mt-5 text-light">Projects</h6>
+                </div>
+                <div onclick="contact()" class="rounded-circle me-5 items" style="margin-top: 100px;">
+                    <a href="#"><img class="mt-4" src="img/about-icon.png" alt=""></a>
+                    <h6 class="mt-5 w-100 text-light">About Us</h6>
+                </div>
+                <div onclick="signup()" class="rounded-circle me-5 items" style="margin-top: 100px;">
+                    <a href="#"><img class="mt-4" src="img/contact-icon.png" alt=""></a>
+                    <h6 class="mt-5 text-light">Contact Us</h6>
+                </div>
+                <div onclick="faq()" class="rounded-circle me-5 items" style="margin-top: 100px;">
+                    <a href="#"><i class="bi bi-question-circle fs-1 text-dark" style="top: 15px;position: relative;"></i></a>
+                    <h6 class="mt-5 text-light">FAQ</h6>
+                </div>
+                <div onclick="openNav()" class="rounded-circle me-5 items" style="margin-top: 100px;">
+                    <a href="#"><i class="bi bi-three-dots fs-1 text-dark"
+                            style="top: 15px;position: relative;"></i></a>
+                    <h6 class="mt-5 text-light">More</h6>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center" style="bottom: 400px;position: absolute;">
+                <h1 class="text-white mt-3">NEWLINE</h1>
+                <h5 class="fw-light text-light">WELCOME TO WEB DESIGN AGENCY</h5>
+            </div>
+        </div>
+        <div class="row" id="home" style="margin-left: 270px;bottom: 200px;position: relative;display: block;">
+            <div class="col-1" style="background-color: orange;width: 1171px;height: 20px;"></div>
+            <div class="col-10 text-center bg-light item shadow-lg">
+                <h4 class="pt-4 text-dark fw-lighter">ABOUT NEWLINE TEMPLATE</h4>
+                <p class="w-75 ms-auto me-auto p-3 fw-lighter">Newline is free CSS template provided by templatemo site.
+                    Credits go to Pexels.com for a video background and Unsplash for images. Please support templatemo
+                    by spreading a word. Thank you. If you have any question, feel free to contact us on Facebook page.
+                    Quisque dictum convallis mi. In dapibus auctor dictum donec mattis quis eros ultricies feugiat.</p>
+                <button class="text-dark p-3 rounded mb-4">Discover More</button>
+            </div>
+        </div>
+        <div class="row" id="contact" style="bottom: 200px;position: relative;margin-left: 270px;display: none;">
+            <div style="background-color: orange;width: 1171px;height: 20px;"></div>
+            <div class="col-10 bg-light item shadow-lg d-flex">
+                <div>
+                    <img class="me-5" src="img/left-about-image.jpg" alt="">
+                </div>
+                <div class="text-left">
+                    <h4 class="pt-4 text-dark fw-lighter mb-4">WHO WE ARE?</h4>
+                    <p class="fw-lighter mb-4">Fusce neque leo, dapibus sed imperdiet sed, vulputate sed purus. Nam eget
+                        justo in nibh facilisis rhoncus. Donec et risus non mauris lobortis convallis. Aliquam id urna
+                        quis ante blandit semper.</p>
+                    <button class="text-dark p-3 rounded mb-3">Discover More</button>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="project" style="bottom: 200px;position: relative;margin-left: 270px;display: none;">
+            <div style="background-color: orange;width: 1171px;height: 20px;"></div>
+            <div class="col-10 bg-light item shadow-lg">
+                <div class="d-flex">
+                    <img class="w-25 p-3" src="img/item-01.jpg" alt="">
+                    <img class="w-25 p-3" src="img/item-02.jpg" alt="">
+                    <img class="w-25 p-3" src="img/item-03.jpg" alt="">
+                    <img class="w-25 p-3" src="img/item-04.jpg" alt="">
+                </div>
+                <div class="d-flex">
+                    <img class="w-25 p-3" src="img/item-05.jpg" alt="">
+                    <img class="w-25 p-3" src="img/item-06.jpg" alt="">
+                    <img class="w-25 p-3" src="img/item-07.jpg" alt="">
+                    <img class="w-25 p-3" src="img/item-08.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row" id="signup" style="bottom: 200px;position: relative;margin-left: 270px;display: none;">
+            <div style="background-color: orange;width: 1171px;height: 20px;"></div>
+            <div class="col-10 bg-light item shadow-lg">
+                <form class="row g-3">
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label mt-3">First name</label>
+                        <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label mt-3">Last name</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefaultUsername" class="form-label mt-3">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                            <input type="text" class="form-control" id="validationDefaultUsername"
+                                aria-describedby="inputGroupPrepend2" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationDefault03" class="form-label">City</label>
+                        <input type="text" class="form-control" id="validationDefault03" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault04" class="form-label">Gender</label>
+                        <select class="form-select" id="validationDefault04" required>
+                            <option selected disabled value=""></option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault05" class="form-label">Zip</label>
+                        <input type="text" class="form-control" id="validationDefault05" required>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                            <label class="form-check-label" for="invalidCheck2">
+                                Agree to terms and conditions
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary mb-3" type="submit">Submit form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row" id="faq" style="bottom: 200px;position: relative;margin-left: 270px;display: none;">
+            <div style="background-color: orange;width: 1171px;height: 20px;"></div>
+            <div class="col-10 bg-light item shadow-lg">
+                <h2 class="text-center pt-5">FAQ</h2>
+                <div class="p-5" id="accordion">
+                    <h3 class="bg-warning">FAQ 1</h3>
+                    <div>
+                      <p>
+                      Lorem ipsum dolor sit amet.
+                      </p>
+                    </div>
+                    <h3 class="bg-warning">FAQ 2</h3>
+                    <div>
+                      <p>
+                      Lorem ipsum dolor sit amet.
+                      </p>
+                    </div>
+                    <h3 class="bg-warning">FAQ 3</h3>
+                    <div>
+                      <p>
+                     Lorem ipsum dolor sit amet.
+                      </p>
+                      <ul>
+                        <li>List item one</li>
+                        <li>List item two</li>
+                        <li>List item three</li>
+                      </ul>
+                    </div>
+                    <h3  class="bg-warning">FAQ 4</h3>
+                    <div>
+                      <p>
+                     Lorem ipsum dolor sit amet.
+                      </p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center bg-warning" style="height: 50px;">
+        <p class="pt-3 fw-lighter fs-6">Designed by Armin Shams</p>
+    </div>
+
+
+    <script>
+
+        function home() {
+            $("#contact").fadeOut(10);
+            $("#home").fadeIn(2000);
+            $("#project").fadeOut(10);
+            $("#signup").fadeOut(10);
+            $("#faq").fadeOut(10);
+        }
+        function contact() {
+            $("#contact").fadeIn(2000);
+            $("#home").fadeOut(10);
+            $("#project").fadeOut(10);
+            $("#signup").fadeOut(10);
+            $("#faq").fadeOut(10);
+        }
+        function project() {
+            $("#project").fadeIn(2000);
+            $("#home").fadeOut(10);
+            $("#contact").fadeOut(10);
+            $("#signup").fadeOut(10);
+            $("#faq").fadeOut(10);
+        }
+        function signup() {
+            $("#project").fadeOut(10);
+            $("#home").fadeOut(10);
+            $("#contact").fadeOut(10);
+            $("#faq").fadeOut(10);
+            $("#signup").fadeIn(2000);
+        }
+        function faq() {
+            $("#project").fadeOut(10);
+            $("#home").fadeOut(10);
+            $("#contact").fadeOut(10);
+            $("#signup").fadeOut(10);
+            $("#faq").fadeIn(2000);
+        }
+        function more() {
+            $(".sidenav").fadeIn(2000);
+            document.getElementsByClassName('sidenav').style.left = '1000px'
+        }
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+
+            document.getElementById("navbar").style.display = "none";
+
+            document.getElementById("navbar2").style.display = "block";
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+
+            document.getElementById("navbar").style.display = "block";
+
+            document.getElementById("navbar2").style.display = "none";
+        }
+
+
+    </script>
+</body>
+
+</html>
